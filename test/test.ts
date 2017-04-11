@@ -127,4 +127,16 @@ describe('tests', () => {
 
     })
 
+    it('should auto quote if param has white space', () => {
+
+        const { one, two } = {
+            one: 'i should be quoted',
+            two: '"i" should \'be\' "quoted"'
+        }
+
+        expect(toSpawnArgs({ one })).to.eql(['--one', '"i should be quoted"'])
+        expect(toSpawnArgs({ two }, { quote: true })).to.eql(['--two', '"\\"i\\" should \\"be\\" \\"quoted\\""'])
+
+    })
+
 })

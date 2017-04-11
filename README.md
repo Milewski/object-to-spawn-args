@@ -10,6 +10,7 @@ Converts an options object to an array suitable for passing to `child_process.sp
 - Single letter object properties (e.g. `c: "red"`) convert to short-option args (e.g. `-c red`).
 - Longer object properties (e.g. `colour: "red"`) convert to long-option args (e.g. `--colour red`).
 - Object property values equalling `true` convert to flags (e.g. `-l`).
+- Object property values containing white spaces get auto quoted (e.g. `c: "hello world"`) convert to (e.g. `-c "hello world"`).
 
 This options object:
 ```js

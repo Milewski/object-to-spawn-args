@@ -1,5 +1,13 @@
-function quote(value, toQuote) {
-    return toQuote ? '"' + value + '"' : value
+function quote(value: string | number, toQuote: boolean) {
+    return (toQuote || hasSpace(value)) ? '"' + scapeQuotes(value) + '"' : scapeQuotes(value)
+}
+
+function hasSpace(string: string | number): boolean {
+    return (typeof string === 'string') ? /\s/.test(string) : false
+}
+
+function scapeQuotes(string) {
+    return (typeof string === 'string') ? string.replace(/("|')/g, '\\"') : string
 }
 
 export function toSpawnArgs(args: { [key: string]: any }, config?: {}) {
@@ -36,8 +44,11 @@ export function toSpawnArgs(args: { [key: string]: any }, config?: {}) {
                 }
 
             } else {
+
                 output.push(prefix + prop)
+
                 if (value !== true) {
+
                     if (Array.isArray(value)) {
                         value.forEach(item => {
                             output.push(quote(item, options.quote))
@@ -45,11 +56,18 @@ export function toSpawnArgs(args: { [key: string]: any }, config?: {}) {
                     } else {
                         output.push(quote(value, options.quote))
                     }
+
                 }
             }
         }
     }
+
     return output
+
 }
 
 export default toSpawnArgs;
+
+if (typeof module === 'object' && module.exports) {
+    module.exports = toSpawnArgs
+}

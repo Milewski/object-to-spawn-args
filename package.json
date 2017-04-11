@@ -1,6 +1,6 @@
 {
   "name": "options-to-spawn-args",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Transform an options object into an array of args.",
   "keywords": [
     "args",
