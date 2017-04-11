@@ -67,7 +67,3 @@ export function toSpawnArgs(args: { [key: string]: any }, config?: {}) {
 }
 
 export default toSpawnArgs;
-
-if (typeof module === 'object' && module.exports) {
-    module.exports = toSpawnArgs
-}
