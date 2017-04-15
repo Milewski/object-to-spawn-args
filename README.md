@@ -15,17 +15,17 @@ Converts an options object to an array suitable for passing to `child_process.sp
 This options object:
 ```js
 const options = {
-    l: true,
-    c: "red",
-    man: "pete",
-    tramp: true
+    o: true,
+    t: "hello",
+    three: "world",
+    four: true
 }
 ```
 converts to
 ```js
-[ "-l", "-c", "red", "--man", "pete", "--tramp" ]
+[ "-o", "-t", "hello", "--three", "world", "--four" ]
 ```
-
+****
 ## Installation
 
 ```bash
@@ -35,7 +35,7 @@ $ npm install options-to-spawn-args --save
 ## Usage
 
 ```js
-import toSpawnArgs from 'object-to-spawn-args';
+import toSpawnArgs from 'options-to-spawn-args';
 import { spawn } from 'child_process';
 
 const options = {
