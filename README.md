@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/Milewski/options-to-spawn-args.svg?branch=master)](https://travis-ci.org/Milewski/options-to-spawn-args)
+# options-to-spawn-args
+
+[![Build Status](https://travis-ci.org/milewski/options-to-spawn-args.svg?branch=master)](https://travis-ci.org/milewski/options-to-spawn-args)
 [![npm version](https://badge.fury.io/js/options-to-spawn-args.svg)](https://badge.fury.io/js/options-to-spawn-args)
 [![npm downloads](https://img.shields.io/npm/dm/options-to-spawn-args.svg)](https://www.npmjs.com/package/options-to-spawn-args)
-[![dependencies](https://david-dm.org/Milewski/options-to-spawn-args.svg)](https://www.npmjs.com/package/options-to-spawn-args)
-
-# options-to-spawn-args
+[![dependencies](https://david-dm.org/milewski/options-to-spawn-args.svg)](https://www.npmjs.com/package/options-to-spawn-args)
 
 Converts an options object to an array suitable for passing to `child_process.spawn()`.
 

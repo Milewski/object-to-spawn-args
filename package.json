@@ -10,19 +10,23 @@
     "arguments",
     "subargs"
   ],
-  "author": "Rafael @Milewski",
+  "author": {
+    "name": "Rafael Milewski",
+    "email": "rafael.milewski@gmail.com",
+    "url": "https://github.com/milewski"
+  },
   "license": "MIT",
   "main": "source/options-to-spawn-args.js",
   "files": [
     "source/*.js"
   ],
-  "homepage": "https://github.com/Milewski/options-to-spawn-args",
+  "homepage": "https://github.com/milewski/options-to-spawn-args",
   "bugs": {
-    "url": "https://github.com/Milewski/options-to-spawn-args/issues"
+    "url": "https://github.com/milewski/options-to-spawn-args/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Milewski/options-to-spawn-args.git"
+    "url": "git+https://github.com/milewski/options-to-spawn-args.git"
   },
   "scripts": {
     "prepublish": "npm run build && npm test",
